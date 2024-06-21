@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yelloe">
+    <center>
+        <table border="1" cellspacing="5" bgcolor="white">
+            <caption><b>input marks</b></caption>
+            <tr>
+                <th rowspan="2">Name</th>
+                <th colspan="4">Score</th>
+            </tr>
+            <tr>
+                <th>hindi</th>
+                <th>english</th>
+                    <th>math</th>
+                        <th>pps</th>
+                        <th>WT</th>
+
+            </tr>
+            <tr>
+                <td><input type="text" id="aname"></td>
+                <td><input type="text" id="am"></td>
+                <td><input type="text" id="aj"></td>
+                <td><input type="text" id="ad"></td>
+                <td><input type="text" id="an"></td>
+
+            </tr>
+            <tr>
+                <th colspan="5" height="40">
+                    <input type="submit" value="add to title" onclick="sub()"></th>
+                
+            </tr>
+
+        </table>
+        <br>
+        <table border="1" cellspacing="5" bgcolor="white"
+        height="100" width="500" cellpadding="5" id="tablescored">
+        <caption><b>Student data</b></caption>
+        <tr>
+            <th width="100">name</th>
+            <th>total</th>
+            <th>Average</th>
+            <th>Pass or fail</th> 
+        </tr>
+
+    
+    </table>
+
+    </center>
+    <script type="text/javascript">
+        var n, k, r, e, v, sum, avg;
+        n = (document.getElementById('aname').value);
+        k = parseFloat(document.getElementById('am'))
+        r = parseFloat(document.getElementById('aj'));
+       e =  parseFloat(document.getElementById('ad'));
+        v = parseFloat(document.getElementById('an'));
+
+        // caluclate total
+
+        sum= k+r+e+b;
+        avg=sum/4;
+        // display on student data
+        var newtable= document.getElementById("table score")
+        var row = newtable.insertrow(-1);
+        var cell1 = row.indsertcell(0);
+        var cell2 = row.indsertcell(0);
+        var cell3 = row.indsertcell(0);
+        var cell4 = row.indsertcell(0);
+
+        cell4.innerHTML = n;
+        cell3.innerHTML = sum;
+        cell2.innerHTML = avg;
+
+
+        if(avg>=70){n
+            cell1.innerHTML="<font color=green>pass</font>";
+            cell1.innerHTML="font color=red>fail</font>";
+
+        }
+    </script>
+</body>
+    
+    
+</body>
+</html>

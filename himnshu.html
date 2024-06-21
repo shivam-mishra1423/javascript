@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: url(https://png.pngtree.com/thumb_back/fh260/back_pic/03/85/00/7057cbcecaa171b.jpg)no-repeat;
+            background-size: cover;
+        }
+        .ram{
+            width:40%;
+            height: 500px;
+            background-color: pink;
+            text-align: center;
+            float: left;
+            margin: 40px 1opx 0 150px;
+
+        }
+        .java{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 55px;
+            padding: 10px;
+            margin-bottom: 60px;
+        }
+        .ram input{
+            height: 30px;
+            width: 40%;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .ram label{
+            font-size: 22px;
+            padding-right: 7opx;
+            margin-bottom: 10px;
+        }
+        .ram1{
+            outline: none;
+            border: none;
+            width: 21%;
+            height: 30px;
+            margin-right: 30px;
+            margin-top: 50px;
+            font-size: 20px;
+            background-color: brown;
+
+        }
+        .ram2{
+            outline: none;
+            border: none;
+            width: 22%;
+            height: 30px;
+            font-size: 20px;
+            background-color: brown;
+            margin-right: 30px;
+            margin-top: 50px;
+        }
+        .ram3{
+            outline: none;
+            border: none;
+            width: 20%;
+            height: 30px;
+            background-color: brown;
+            margin-top: 50px;
+            font-size: 20px;
+        }
+        #result{
+            height: 500px;
+            width: 30%;
+            float: right;
+            margin-top: 1px;
+            background-color: white;
+            margin-left: 20px;
+        }
+        #head1, #head2, #head3{
+            background-color: black;
+            width: 100%;
+            height: 45px;
+            color: white;
+            text-align: center;
+        }
+        #total{
+            height: 200px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        #grade{
+            height: 80px;
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: white;
+        }
+        #ave{
+            height: 80px;
+            width: 100%;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: white;
+        }
+
+        
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="ram">
+        <div class="java"><h1> RESULT CARDS </h1></div>
+        <label >english</label> <input type="text" id="eng"><br>
+        <label >mathematics</label> <input type="text" id="mat"><br>
+        <label >chemistry</label> <input type="text" id="che"><br>
+        <label >pps</label> <input type="text" id="pps"><br>
+        <label >workshop technology</label> <input type="text" id="wt"><br>
+        <br>
+        <button class="ram1" onclick="total()">TOTAL</button>
+        <button class="ram2" onclick="average()">Average</button>
+        <button class="ram3" onclick="grade()">grade</button>
+
+
+
+
+    </div>
+    <div id="result">
+        <div id="head1"><h1>total</h1></div>
+        <div id="total">
+
+        </div>
+        <div id="head2"><h2>average</h2></div>
+        <div id="ave">
+
+        </div>
+        <div id="head3"><h3>grade</h3></div>
+        <div id="grade"></div>
+    </div>
+
+
+
+    <script>
+        function total(){
+            var sub1= parseInt(document.getElementById("eng").value);
+            var sub2= parseInt(document.getElementById("mat").value);
+            var sub3= parseInt(document.getElementById("che").value);
+            var sub4= parseInt(document.getElementById("pps").value);
+            var sub5= parseInt(document.getElementById("wt").value);
+        
+        if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100){
+            alert("please enter marks in range of 100");
+        }
+        else{
+            var total = sub1 + sub2 + sub3 + sub4 +sub5;
+            document.getElementById("total").innerHTML ="english marks :"+sub1+" <br> mathematics marks:"+sub2+" <br> chemistry marks:"+sub3+"<br> pps marks;"+sub4+" workshop technology marks:"+sub5+"<br>     <br> total marks"+total;
+        }
+        
+        
+        
+        }
+
+
+        function average(){
+            var sub1= parseInt(document.getElementById("eng").value);
+            var sub2= parseInt(document.getElementById("mat").value);
+            var sub3= parseInt(document.getElementById("che").value);
+            var sub4= parseInt(document.getElementById("pps").value);
+            var sub5= parseInt(document.getElementById("wt").value);
+
+
+             
+        if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100){
+            alert("please enter marks in range of 100");
+        }
+        else{
+            var total = sub1 + sub2 + sub3 + sub4 + sub5;
+            var ave=total/5;
+            document.getElementById("ave").innerHTML="your average marks is :" + ave;
+        }
+        
+
+        }
+
+        function grade(){
+            var sub1= parseInt(document.getElementById("eng").value);
+            var sub2= parseInt(document.getElementById("mat").value);
+            var sub3= parseInt(document.getElementById("che").value);
+            var sub4= parseInt(document.getElementById("pps").value);
+            var sub5= parseInt(document.getElementById("wt").value);
+
+                 
+        if(sub1>100 || sub2>100 || sub3>100 || sub4>100 || sub5>100){
+            alert("please enter marks in range of 100");
+        }
+        else{
+            var total = sub1 + sub2 + sub3 + sub4 + sub5;
+            var ave=total/5;
+
+            if(ave>=80 && ave<=100){
+                document.getElementById("grade").innerHTML="your grade is A";
+            }
+           else if(ave>=75 && ave<=80){
+                document.getElementById("grade").innerHTML="your grade is B+";
+           }
+           else  if(ave>=70 && ave<=75){
+                document.getElementById("grade").innerHTML="your grade is B";
+
+           }
+           else  if(ave>=60 && ave<=70){
+                document.getElementById("grade").innerHTML="your grade is c+";
+           }
+           else  if(ave>=50 && ave<=60){
+                document.getElementById("grade").innerHTML="your grade is c";
+           }
+                        
+
+        
+
+
+
+        }
+    }
+        
+           
+    </script>
+</body>
+</html>
